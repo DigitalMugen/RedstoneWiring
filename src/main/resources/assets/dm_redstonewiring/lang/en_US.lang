@@ -1,0 +1,3 @@
+itemGroup.dm_redstonewiring.creative_tab=Redstone Wiring
+
+tile.dm_redstonewiring.redstone_wire.name=Redstone Wire

@@ -1,6 +1,6 @@
 [
 {
-  "modid": "DM_redstonewiring",
+  "modid": "DM_redstoneWiring",
   "name": "Redstone Wiring",
   "description": "There must be a better way of transporting redstone signals than pouring dust on the ground.",
   "version": "${version}",
