@@ -1,7 +1,7 @@
 package com.digitalmugen.redstonewiring.init;
 
 import com.digitalmugen.redstonewiring.RedstoneWiringMod;
-import com.digitalmugen.redstonewiring.block.BlockRedstoneWire;
+import com.digitalmugen.redstonewiring.block.BlockRedironWire;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -20,16 +20,16 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  */
 public class RedstoneWiringBlocks {
-	public static Block redstoneWire;
+	public static Block redironWire;
 	
-	private static final String redstoneWireName = "redstone_wire";
+	private static final String redironWireName = "block_rediron_wire";
 
 	/**
 	 * Pre-initialization of Redstone Wire blocks
 	 * @param event FML pre-initialization event details
 	 */
 	public static void preInit(FMLPreInitializationEvent event) {
-		redstoneWire = registerBlock(new BlockRedstoneWire(), redstoneWireName);
+		redironWire = registerBlock(new BlockRedironWire(), redironWireName);
 	}
 
 	/**
@@ -40,7 +40,7 @@ public class RedstoneWiringBlocks {
 		if (event.getSide() == Side.CLIENT) {
 			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 
-			registerBlockRenderItem(renderItem, redstoneWire, redstoneWireName);
+			registerBlockRenderItem(renderItem, redironWire, redironWireName);
 		}
 	}
 
