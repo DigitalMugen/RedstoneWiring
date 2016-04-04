@@ -1,8 +1,7 @@
 package com.digitalmugen.redstonewiring.creativetab;
 
-import com.digitalmugen.redstonewiring.init.RedstoneWiringItems;
-
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -35,7 +34,7 @@ public class RedstoneWiringCreativeTab extends CreativeTabs {
 		/*
 		 * TODO: Replace Minecraft's redstone item with Redstone Wire's redstone
 		 */
-		return RedstoneWiringItems.redironWire;
+		return Items.redstone;
 	}
 
 }

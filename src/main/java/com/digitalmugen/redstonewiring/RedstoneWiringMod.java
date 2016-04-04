@@ -3,6 +3,7 @@ package com.digitalmugen.redstonewiring;
 import com.digitalmugen.redstonewiring.creativetab.RedstoneWiringCreativeTab;
 import com.digitalmugen.redstonewiring.init.RedstoneWiringBlocks;
 import com.digitalmugen.redstonewiring.init.RedstoneWiringItems;
+import com.digitalmugen.redstonewiring.init.RedstoneWiringRecipes;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.fml.common.Mod;
@@ -56,6 +57,8 @@ public class RedstoneWiringMod {
 	 */
 	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
+		RedstoneWiringRecipes.postInit(event);
+		
 		RedstoneWiringBlocks.postInit(event);
 		RedstoneWiringItems.postInit(event);
 	}

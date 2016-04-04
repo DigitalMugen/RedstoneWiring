@@ -1,7 +1,6 @@
 package com.digitalmugen.redstonewiring.init;
 
 import com.digitalmugen.redstonewiring.RedstoneWiringMod;
-import com.digitalmugen.redstonewiring.block.BlockRedironWire;
 
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -20,16 +19,14 @@ import net.minecraftforge.fml.relauncher.Side;
  *
  */
 public class RedstoneWiringBlocks {
-	public static Block redironWire;
 	
-	private static final String redironWireName = "block_rediron_wire";
-
+	
 	/**
 	 * Pre-initialization of Redstone Wire blocks
 	 * @param event FML pre-initialization event details
 	 */
 	public static void preInit(FMLPreInitializationEvent event) {
-		redironWire = registerBlock(new BlockRedironWire(), redironWireName);
+		
 	}
 
 	/**
@@ -40,7 +37,7 @@ public class RedstoneWiringBlocks {
 		if (event.getSide() == Side.CLIENT) {
 			RenderItem renderItem = Minecraft.getMinecraft().getRenderItem();
 
-			registerBlockRenderItem(renderItem, redironWire, redironWireName);
+			
 		}
 	}
 
@@ -62,8 +59,8 @@ public class RedstoneWiringBlocks {
 	 * @param block			Block to be registered as an item
 	 * @param name			Unique name of the block
 	 */
-	private static void registerBlockRenderItem(RenderItem renderItem, Block block, String name) {
+	private static void registerBlockRenderItem(RenderItem renderItem, Block block) {
 		renderItem.getItemModelMesher().register(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation(RedstoneWiringMod.MODID + ":" + name, "inventory"));
+				new ModelResourceLocation(block.getRegistryName(), "inventory"));
 	}
 }
